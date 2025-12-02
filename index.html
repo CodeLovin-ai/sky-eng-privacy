@@ -5,11 +5,14 @@
   <title>Sky ENG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background: linear-gradient(to bottom, #0a0a0a, #1a1a1a);
       color: #f5f5f7;
-      margin: 0;
+      line-height: 1.6;
     }
 
     /* Navigation */
@@ -33,67 +36,49 @@
     nav a:hover { color: #0a84ff; }
 
     /* Hero */
-    header {
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 120px 20px 60px;
+      padding: 0 20px;
     }
-    .logo {
-      width: 100px;
-      height: 100px;
+    .hero img {
+      width: 120px;
+      height: 120px;
       margin-bottom: 20px;
     }
-    h1 {
+    .hero h1 {
       font-size: 3rem;
       font-weight: 700;
       margin-bottom: 20px;
     }
-    p, li {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      max-width: 800px;
-      text-align: center;
-      margin: 0 auto 20px;
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
       color: #d1d1d6;
     }
 
-    h2 {
-      font-size: 1.8rem;
-      font-weight: 600;
-      margin-top: 40px;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
+    /* Sections */
     section {
-      margin: 80px auto;
       max-width: 900px;
+      margin: 80px auto;
       padding: 0 20px;
       text-align: center;
     }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0 auto 20px;
-      max-width: 800px;
-    }
-    ul li::before {
-      content: "• ";
-      color: #0a84ff;
-    }
-
-    a {
-      color: #0a84ff;
-      text-decoration: none;
-    }
-    a:hover { text-decoration: underline; }
-
-    .highlight {
-      font-size: 1.3rem;
-      font-weight: 600;
+    section h2 {
+      font-size: 2rem;
       margin-bottom: 20px;
-      color: #ffffff;
+      font-weight: 600;
     }
+    section p, section li {
+      font-size: 1.1rem;
+      color: #d1d1d6;
+    }
+    ul { list-style: none; padding: 0; }
+    ul li::before { content: "• "; color: #0a84ff; }
 
     footer {
       text-align: center;
@@ -102,6 +87,7 @@
       color: #8e8e93;
     }
 
+    /* Smooth scroll */
     html { scroll-behavior: smooth; }
   </style>
 </head>
@@ -114,11 +100,11 @@
   </nav>
 
   <!-- Hero -->
-  <header>
-    <img src="1024.png" alt="Sky ENG Logo" class="logo">
+  <section class="hero">
+    <img src="1024.png" alt="Sky ENG Logo">
     <h1>Sky ENG</h1>
     <p>Speak English with real exam-style accuracy. Your personal AI-powered English-speaking coach.</p>
-  </header>
+  </section>
 
   <!-- Privacy Policy -->
   <section id="privacy">
@@ -134,14 +120,11 @@
 
   <!-- App Store Description -->
   <section id="description">
-    <div class="highlight">🔥 App Store Description (Ready to Paste)</div>
+    <h2>🔥 App Store Description</h2>
     <p><strong>Sky ENG – Speak English With Real Exam-Style Accuracy</strong></p>
     <p>Sky ENG is your personal English-speaking coach powered by advanced speech analysis — the same style of analysis used in English exams like IELTS, TOEFL, PTE, CELPIP, Cambridge, and Business English assessments. Just speak naturally, and Sky ENG instantly listens, evaluates, and replies like a real tutor.</p>
     <p>Perfect for daily practice, job interviews, office communication, or preparing for English proficiency exams — all 100% free, with no subscriptions and no locked features.</p>
-
-    <!-- Keep your detailed subsections here -->
-    <!-- 🎤 Real-Time Speaking Practice, 📊 Exam-Style Speech Analytics, etc. -->
-    <!-- (unchanged from your version, just wrapped inside this section) -->
+    <!-- You can keep adding the detailed bullet sections here as before -->
   </section>
 
   <footer>
